@@ -1,0 +1,21 @@
+import matplotlib.pyplot as plt
+import numpy as np
+fig, axes = plt.subplots(2, 3, tight_layout=True)
+# 折れ線グラフ
+y0 = [1, 2, -5, 2]
+axes[0, 0].plot(y0)
+
+# sin関数
+x1 = np.linspace(0, 2 * np.pi, 100)
+y1 = np.sin(x1)
+axes[0, 1].plot(x1, y1)
+
+# ヒストグラム
+x2 = np.random.randn(1000)
+axes[0, 2].hist(x2, bins=30)
+
+# 散布図
+x3 = np.random.rand(50)
+y3 = np.random.rand(50)
+axes[1, 0].scatter(x3, y3)
+plt.show()
